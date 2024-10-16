@@ -72,7 +72,7 @@ SNAPとDCSG-Emuの接続にスルーホール用テストワイヤを使用し�
 ![Wire-Connection](image/DCSG-Emu_FW_1.jpg)
 ![Wire-Connection-zoom](image/DCSG-Emu_FW_2.jpg)
 
-PC（IPE）、SNAP、DCSG-Emuを各ケーブルで接続後、firmwareフォルダ内のHEXファイルをPIEを使って書き込みます。
+PC（IPE）、SNAP、DCSG-Emuを各ケーブルで接続後、firmwareフォルダ内のHEXファイルをIPEを使って書き込みます。
 DCSG-Emu Simplex版には、必ず、**built-in DAC**用のHEXファイルを使用してください。
 
 以下を参考に、DeviceとHEXファイルを選択下さい。Deviceは「**PIC18F27Q43**」です。Familyは「Advanced 8-bit MCUs(PIC18)」です。

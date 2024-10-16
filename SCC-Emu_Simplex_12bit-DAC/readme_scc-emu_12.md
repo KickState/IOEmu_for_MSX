@@ -82,7 +82,7 @@ SNAPとSCC-Emuの接続にスルーホール用テストワイヤを使用しま
 ![Wire-Connection](image/SCC-Emu_FW_1.jpg)
 ![Wire-Connection-zoom](image/SCC-Emu_FW_2.jpg)
 
-PC（IPE）、SNAP、SCC-Emuを各ケーブルで接続後、firmwareフォルダ内のHEXファイルをPIEを使って書き込みます。
+PC（IPE）、SNAP、SCC-Emuを各ケーブルで接続後、firmwareフォルダ内のHEXファイルをIPEを使って書き込みます。
 SCC-Emu Simplex with 12-bit DAC版には、必ず、**12-bit DAC**用のHEXファイルを使用してください。
 
 以下を参考に、DeviceとHEXファイルを選択下さい。Deviceは「**PIC18F47Q43**」です。Familyは「Advanced 8-bit MCUs(PIC18)」です。

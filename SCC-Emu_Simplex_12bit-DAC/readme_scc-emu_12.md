@@ -41,7 +41,7 @@ SCC-Emuは、SCCとして認識されますが、古いバージョンのMGSDRV�
 
 ### (1) MSX turboR
 
-現状、高速モードでは処理落ちします。Z80モードでご使用頂くか、又は、高速モード用暫定版firmware（firmwareフォルダ内の「xxx_for_turboR.hex」）をご使用ください。
+Firmware Rev. 1.1.0 (2025/1/3リリース版)より、turboRの高速モードに正式に対応しました。それ以前のFirmwareをご使用の場合は、アップデートをお勧めいたします。
 
 ### (2) MSX本体のリセット
 
@@ -51,7 +51,7 @@ SCC-Emuは、MSX本体のリセット信号を使用していません。
 
 ### (3) 対応ソフト
 
-SCC-Emuは、SCC互換のためMGSDRV以外でも使用できる可能性ありますが、未検証です。SofarunでもExternal SCCとして認識されますが、SCC-EmuのBus Waitの影響が出るケースがあるようです。ゲーム向きではありません。
+SCC-Emuは、SCC互換のためMGSDRV以外でも使用できる可能性ありますが、未検証です。SofarunでもExternal SCCとして認識されますが、SCC-EmuのBus-Waitの影響が出るケースがあるようです。ゲームではチャネルイネーブル（ミュート）を多用する「効果音」でBus-Waitの影響を受けます。
 
 ## 5. PICマイコン用Firmwareの書き込み方法
 

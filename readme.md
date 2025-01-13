@@ -9,11 +9,12 @@ PIC18F Qシリーズの8-bitマイコンを使用してMSXの各種IO機能を�
 例えば、「SCC-Emu」はMSX実機で使用できるSCC音源のエミュレーターです。
 
 ## 種類
-現時点で以下の3種類の単一機能版を公開しています。
+現在、単機能版のSimplexシリーズ 3種、多機能版のMultiplex 1種(SCC+DCSG+MIDI-OUT)を公開しています。
 
 * [IOEμ: SCC-Emu Simplex with 12-bit DAC](/SCC-Emu_Simplex_12bit-DAC/readme_scc-emu_12.md)
 * [IOEμ: SCC-Emu Simplex with 15-bit DAC](/SCC-Emu_Simplex_15bit-DAC/readme_scc-emu_15.md)
 * [IOEμ: DCSG-Emu Simplex with built-in DAC](/DCSG-Emu_Simplex/readme_dcsg-emu.md)
+* [IOEμ: Multiplex 3-in-1 MO](/Multiplex_3-in-1_MO/readme_multiplex_3-in-1_mo.md)
 
 それぞれの特徴、使用方法等に関しては、各フォルダ内の「readme_xxx.md」ファイルをご参照ください。
 
@@ -28,7 +29,7 @@ PIC18F Qシリーズの8-bitマイコンを使用してMSXの各種IO機能を�
 
 本免責事項に記載されている内容は、提供者が本コンテンツに対する権利を放棄するものではありません。
 
-© 2024 [KickState](https://x.com/kickstate7). All rights reserved.
+© 2024-2025 [KickState](https://x.com/kickstate7). All rights reserved.
 
 ## Disclaimer
 
@@ -42,5 +43,5 @@ All copyrights and other rights related to the Content belong to the provider. Y
 The inclusion of this disclaimer does not constitute a waiver of the provider's rights over the Content.
 
 
-© 2024 [KickState](https://x.com/kickstate7). All rights reserved.
+© 2024-2025 [KickState](https://x.com/kickstate7). All rights reserved.
 

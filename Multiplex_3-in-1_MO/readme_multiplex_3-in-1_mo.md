@@ -70,12 +70,15 @@ MultiplexではDCSG、MIDI等の制御レジスタがIOポートに割り当て�
 * Groveコネクタからの逆方向給電(Grove -> Multiplex)も可能ですが、MultiplexをMSXに接続した状態では逆方向通電は絶対にしないで下さい。MSX本体の故障の原因となります。
 * FWアップデートの際にGroveコネクタから5Vを入力する場合、必ず、MultiplexをMSX本体から取り外してください。
 
-Multiplexは以下の基板との組み合わせで動作を確認しています。これらの中でM5Stack社のUnit-SynthはGroveコネクタに直接接続できるMIDI音源ですので手軽にMIDIを楽しめます。
+Multiplexは以下の基板との組み合わせで動作を確認しています。これらの中でM5Stack社のUnit-SynthとMIDI UnitはMIDI音源を搭載していますので手軽にMIDIを楽しめます。
 
 * [M5Stack Unit-Synth](https://docs.m5stack.com/ja/unit/Unit-Synth)
+* [M5Stack MIDI Unit](https://docs.m5stack.com/ja/unit/Unit-MIDI)
 * [necobit MIDI Unit Mini for GROVE](https://necobit.com/denshi/midi-unit-mini-for-grove/)
 * [necobit MIDI Unit for GROVE](https://necobit.com/denshi/grove-midi-unit/)
 * [IoTメディアラボラトリ MIDIアダプタ ver 2.0](https://www.kadenken.com/view/item/000000001837)
+
+![MIDI with SS for Grove port](image/Grove_uart_midi-unit_2.jpg)
 
 ![MIDI for Grove port](image/Grove_uart_midi-unit.jpg)
 

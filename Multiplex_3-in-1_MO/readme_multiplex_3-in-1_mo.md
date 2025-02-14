@@ -106,6 +106,8 @@ DCSG機能は、SN76489ANに対応したソフト等（但し、IOポート割�
 
 MIDI出力機能は、MIDRYでのみ動作検証を行っていますが、Multiplexと併用して不具合が発生しても、MIDRYの作者様はMultiplexとは無関係であり、Multiplexに関する問い合わせはしないで下さい。また、MIDRYのIFオプションは現状では「/i6」のみに対応しています。
 
+**※ ファームウェア Rev. 1.0.1で一部のMIDI機器で発生する再生不具合を修正しています。**
+
 ## 5. PICマイコン用Firmwareの書き込み方法
 
 firmwareフォルダ内の**HEXファイル**は、PICマイコン用のFirmwareです。Firmwareをオンボードで書き込むことも可能です。

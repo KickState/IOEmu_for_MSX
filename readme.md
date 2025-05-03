@@ -9,16 +9,18 @@ PIC18F Qシリーズの8-bitマイコンを使用してMSXの各種IO機能を�
 例えば、「SCC-Emu」はMSX実機で使用できるSCC音源のエミュレーターです。
 
 ## 種類
-現在、単機能版のSimplexシリーズ 3種、多機能版のMultiplex 1種(SCC+DCSG+MIDI-OUT)を公開しています。
+現在、単機能版のSimplexシリーズ 3種、多機能版のMultiplex 1種(SCC+DCSG+MIDI-OUT)を公開しています。また、Multiplexに搭載するGroveポートを経由して制御可能なMotor-Driverユニット、Remote-Controlユニットも用意しています。Motor-DriverユニットはMSX0 Stack/Cardから制御することも可能です。
 
 * [IOEμ: SCC-Emu Simplex with 12-bit DAC](/SCC-Emu_Simplex_12bit-DAC/readme_scc-emu_12.md)
 * [IOEμ: SCC-Emu Simplex with 15-bit DAC](/SCC-Emu_Simplex_15bit-DAC/readme_scc-emu_15.md)
 * [IOEμ: DCSG-Emu Simplex with built-in DAC](/DCSG-Emu_Simplex/readme_dcsg-emu.md)
 * [IOEμ: Multiplex 3-in-1 MO](/Multiplex_3-in-1_MO/readme_multiplex_3-in-1_mo.md)
+* [Motor-Driver Unit for IOEμ](/MotorDriver_Unit/readme_motordriver_unit.md)
+* [Remo-Con Unit for IOEμ](/RemoCon_Unit/readme_remocon_unit.md)
 
 それぞれの特徴、使用方法等に関しては、各フォルダ内の「readme_xxx.md」ファイルをご参照ください。
 
-その他、MISCフォルダにはOneChipBook向けのInternal Expansion CardサイズのUniversal Boardのガーバーデータを置いています。
+その他、MISCフォルダにはOneChipBook向けのInternal Expansion Cardサイズの[Universal Boardのガーバーデータ](/MISC/Universal_board_for_OneChipBook/readme_universal_board_for_onechipbook.md)を置いています。例えば、DCSG-Emu Simplex(PWM版)のファームウェアを書き込んだPICマイコンを、このUniversal Boardに実装すれば、OneChipBookの内蔵スロットに組み込むことも可能です。
 
 ## 免責事項
 

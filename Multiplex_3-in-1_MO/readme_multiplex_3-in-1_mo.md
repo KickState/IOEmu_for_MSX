@@ -36,12 +36,14 @@ MSX本体の電源をオフしてから、空きスロットに**IOEμ: Multiple
 
 MultiplexではDCSG、MIDI等の制御レジスタがIOポートに割り当てられており、以下のIOポートアドレスを使用します。
 
-|IO-port address|R/W|備考
+|IO-port address|R/W|機能
 |--|--|--
-|0x10-0x1f|R/W|MIDI制御他
+|0x10-0x1e|R/W|MIDI制御他
+|0x1F|W|0: MIDI mode (Defualt), 1: Motor-Driver Control mode (F/W Rev.1.0.2以降)
 |0x3F|W|DCSGの制御レジスタ
 |0x7F|W|0x3Fのミラー
 
+* F/W Rev.1.0.2以降でMotor-Driver Unitの制御が可能となります。0x1Fに値を書き込むことでGroveコネクタの機能を選択できます。
 * DCSGの制御レジスタの仕様はSN76489ANのデータシート等を参照してください。
 
 ### (3) 基板の設定：ディップスイッチ
@@ -128,6 +130,7 @@ firmwareフォルダ内の**HEXファイル**は、PICマイコン用のFirmware
 
 IPEソフトウェアは、マイクロチップ製マイコンの統合開発環境[MPLAB X IDE](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide)をインストールすると一緒にインストールされます。
 SNAPは、FWの書込みに使用します。
+SNAPの代わりに[PICkit BASIC](https://www.microchip.com/en-us/development-tool/pg164110)等も使用できます。
 
 SNAPとMultiplexの接続にスルーホール用テストワイヤを使用します。
 **テストワイヤ間がショートしないようにピン間を絶縁テープで保護することをお勧めします。**

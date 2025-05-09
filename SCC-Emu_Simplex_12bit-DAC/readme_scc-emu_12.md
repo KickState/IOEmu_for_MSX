@@ -74,6 +74,7 @@ firmwareフォルダ内の**HEXファイル**は、PICマイコン用のFirmware
 
 IPEソフトウェアは、マイクロチップ製マイコンの統合開発環境[MPLAB X IDE](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide)をインストールすると一緒にインストールされます。
 SNAPは、FWの書込みに使用します。
+SNAPの代わりに[PICkit BASIC](https://www.microchip.com/en-us/development-tool/pg164110)等も使用できます。
 
 SNAPとSCC-Emuの接続にスルーホール用テストワイヤを使用します。
 **テストワイヤ間がショートしないようにピン間を絶縁テープで保護することをお勧めします。**

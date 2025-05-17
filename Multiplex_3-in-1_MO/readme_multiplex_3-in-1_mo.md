@@ -3,9 +3,9 @@
 ## 1. 概要
 
 * IOEμ Multiplex 3-in-1 MOは、SCCとDCSGに対応した8bit PICマイコンによる音源エミュレータです。
-* 加えて、Groveコネクタを1port搭載しており、このPortをMIDI出力用に使用できます。※別途、MIDI-I/F変換基板が必要です。
+* 加えて、Groveコネクタを1port搭載しており、このPortをMIDI入出等に使用できます。※別途、MIDI-I/F変換基板が必要です。
 * MSX実機上でMGSDRV用のSCC互換音源、ゲーム用のDCSG互換音源として使用でき、MIDIは、いかたまさんの「MIDRY」で再生できることを確認しています。
-* SimplexシリーズのSCC-Emu、DCSG-Emu、及びMIDI-OUTの3つの機能を1つの8-bit PICマイコン「PIC18F47Q83」に実装しています。
+* SimplexシリーズのSCC-Emu、DCSG-Emu、及びMIDI I/Fの3つの機能を1つの8-bit PICマイコン「PIC18F47Q83」に実装しています。
 * SCCとDCSGのサウンド波形の生成には、12-bit DACを使用しています。
 * SCCとDCSGは、仕様上は同時発声も可能です。
 * トーン生成は、PICマイコン搭載機能を活用し、SCC 5ch、DCSG 4chの各ch(Tone 8ch + Noise 1ch)の独立制御を実現しています。
@@ -21,11 +21,11 @@
 ## 3. 使用方法
 
 ### (1) 使い方
-MSX本体の電源をオフしてから、空きスロットに**IOEμ: Multiplex 3-in-1 MO基板**（以下、Multiplex）を挿入し、MGSDRV用プレーヤーでのSCC楽曲の再生、MSX実機で動作するSG1000エミュレータ等でのDCSG対応ゲーム、MIDRYでのMIDI再生をお楽しみください。
+MSX本体の電源をオフしてから、空きスロットに**IOEμ: Multiplex 3-in-1 MO基板**（以下、Multiplex）を挿入し、MGSDRV用プレーヤーでのSCC楽曲の再生、MSX実機で動作するSG1000エミュレータ等でのDCSG対応ゲーム、MIDRYでのMIDI再生をお楽しみください。MIDI入力には動作確認用に[MSX-BASICのサンプルプルグラム（要：MSXべーしっ君）](/Multiplex_3-in-1_MO/sample_MSX-BASIC/MIDI-IN/MIDI2PSG.BAS)を用意しています。MIDIキーボードを使ってMSX本体内蔵のPSG音源を鳴らすことが出来ます。MIDI入力はF/W Rev.1.1.0以降で使用できます。
 
 * MultiplexはMGSDRV用プレーヤーでSCCとして認識されますが、古いバージョンのプレーヤーをご使用の場合はスロット指定が必要な場合があるようです。その場合はMultiplexを挿入したスロット番号を指定してください。
 * SCCとDCSGはDACで再生されますが、DACの再生周波数はディップスイッチで設定変更できます（後述）。
-* MIDI-OUTの利用にはGroveコネクタに接続できるMIDI-IF基板が別途必要です（後述）。
+* MIDI-IN/OUTの利用にはGroveコネクタに接続できるMIDI-IF基板が別途必要です（後述）。
 * MIDRY利用時はオプションに「/i6」を指定して下さい。DOS2のプロンプトで「midry /i6」を実行してください。
 
 **ぱるぷ(@parupu_x_nagae)さんのゲームミュージック・SCCアレンジ作品がおススメです。**
@@ -38,12 +38,17 @@ MultiplexではDCSG、MIDI等の制御レジスタがIOポートに割り当て�
 
 |IO-port address|R/W|機能
 |--|--|--
-|0x10-0x1e|R/W|MIDI制御他
+|0x10|R/W|SIO データレジスタ （MIDI,Motor-Driver,Remocon-Unit制御用SIO）
+|0x11|R/W|SIO コマンド(W)/ステータス(R)レジスタ（MIDI,Motor-Driver,Remocon-Unit制御用SIO）
+|0x12-0x1e|R/W|予約
 |0x1F|W|0: MIDI mode (Defualt), 1: Motor-Driver Control mode (F/W Rev.1.0.2以降)
 |0x3F|W|DCSGの制御レジスタ
 |0x7F|W|0x3Fのミラー
 
 * F/W Rev.1.0.2以降でMotor-Driver Unitの制御が可能となります。0x1Fに値を書き込むことでGroveコネクタの機能を選択できます。
+* F/W Rev.1.1.0以降でMIDI入力にも対応しました。
+* 0x10、0x11の各レジスタの仕様はZ80-SIO相当ですが、IOEμで必要とする機能のみを実装した簡易版です。**但し、FIFOの段数は強化しています。**
+* SIOのボーレートはMIDIモードで31250bps、Motor-Driver Control modeで9600bpsに固定されます。
 * DCSGの制御レジスタの仕様はSN76489ANのデータシート等を参照してください。
 
 ### (3) 基板の設定：ディップスイッチ
@@ -56,7 +61,7 @@ MultiplexではDCSG、MIDI等の制御レジスタがIOポートに割り当て�
 
 |SW#|OFF|ON|備考
 |--|--|--|--
-|SW1|Default|-| SW1はOFFで使用してください。
+|SW1|Default|-| SW1は必ず「OFF」で使用してください。
 |SW2|44kHz固定 (SCCとDCSGの同時発声が可能)|最大80kHz (自動調整)| SW2でDACの再生周波数を選択します。
 
 * SCCとDCSGの同時発声は、SW2でDACの再生周波数を「44KHz固定」に設定した場合にのみ可能です。
@@ -64,7 +69,7 @@ MultiplexではDCSG、MIDI等の制御レジスタがIOポートに割り当て�
 
 ### (4) Groveコネクタ
 
-“Multiplex 3-in-1 MO”では、GroveコネクタをMIDI出力ポートとして利用できます。また、FWアップデートの際には5V電源の入力用としても使用できます。
+“Multiplex 3-in-1 MO”では、GroveコネクタをMIDIポートとして利用できます。また、FWアップデートの際には5V電源の入力用としても使用できます。
 
 * MIDI機器との接続には、別途、Groveコネクタに接続できるMIDI-IF変換基板等が必要です。
 * GroveコネクタのPin#2にUARTのTxが割り当てられています。現状、Pin#1のMIDI入力は未使用です。
@@ -106,9 +111,14 @@ DCSG機能は、SN76489ANに対応したソフト等（但し、IOポート割�
 
 ### (4) MIDI対応ソフト
 
+#### MIDI出力
 MIDI出力機能は、MIDRYでのみ動作検証を行っていますが、Multiplexと併用して不具合が発生しても、MIDRYの作者様はMultiplexとは無関係であり、Multiplexに関する問い合わせはしないで下さい。また、MIDRYのIFオプションは現状では「/i6」のみに対応しています。
 
 **※ ファームウェア Rev. 1.0.1で一部のMIDI機器で発生する再生不具合を修正しています。**
+
+#### MIDI入力
+MIDI入力機能向けに動作確認用テストプログラムとして[MSX-BASICのサンプル](/Multiplex_3-in-1_MO/sample_MSX-BASIC/MIDI-IN/MIDI2PSG.BAS)を用意しています。BASICプログラムですが、実行にはBASICコンパイラ「MSX べーしっ君」が必要です。
+IOEμのGroveポートにMIDI-IF変換基板経由で**MIDI Keyboard**を接続してください。MIDI入力を使ってMSX内蔵PSG音源を鳴らすことが出来ます。Note On/offのみに対応しており、動作確認用の簡易プログラムです。IOEμは受信FIFOを強化しているため、純正Z80-SIOを使用する「MSX-MAGAZINE MIDI-I/F2」ではデータを取りこぼす条件でも受信できることを確認しています。
 
 ## 5. PICマイコン用Firmwareの書き込み方法
 

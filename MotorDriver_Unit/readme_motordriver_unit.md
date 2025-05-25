@@ -5,7 +5,7 @@
 * Motor-Driver Unitは、[IOEμ:Multiplex 3-in-1 MO](/Multiplex_3-in-1_MO/readme_multiplex_3-in-1_mo.md)に搭載するGroveポートを使用して制御可能な工作用ブラシ付きDCモーターのドライバー基板です。
 * 3つのモーターを独立して制御・駆動できます。
 * また、Motor-Driver UnitはGroveポートを3ポート搭載しており、無線通信ユニットやセンサーを接続可能です。
-* 無線ユニットやセンサーユニットをMotor-Drive Unitに搭載すれば、センサーデータを無線を使ってMSXで取得できます。
+* 無線ユニットやセンサーユニットをMotor-Driver Unitに搭載すれば、センサーデータを無線を使ってMSXで取得できます。
 * Groveポートを搭載する[MSX0](https://camp-fire.jp/projects/648742/view) Stack/Cardから制御することも可能です
 * [Remo-Con Unit](/RemoCon_Unit/readme_remocon_unit.md)を使用すると、2つのアナログスティックを使った各モーターの繊細な操作や、加速度センサーを使った操作も楽しめます。
 * Motor-Driver Unitは簡単なコマンド使って制御できるため、これらの機器以外でも様々な機器から制御可能です。
@@ -105,8 +105,8 @@ Motor-Driver Unitの制御コマンドは、MSX-BASICでも負荷をかけずに
 |LIFTDWN|0x0D|Motor Ch-C 逆転|ショベル リフトダウン|
 |LIFTBRK|0x0E|Motor Ch-C ブレーキ|機能予約|
 |RESV|0x0F|-|コマンド予約|
-|REC|0x10|コマンド記録|使用条件：コマンド送信間隔 0.1s|
-|PLAY|0x11|コマンド再生|記録されたコマンドを0.1s周期で再生（NOP含む）|
+|REC|0x10|コマンド記録|使用条件：1命令の送信間隔 0.1s|
+|PLAY|0x11|コマンド再生|記録された命令を0.1s周期で再生（NOP含む）|
 |RPSTOP|0x12|コマンド記録再生停止||
 |SNS1E|0x13|センサー1(超音波センサー) ON/OFFトグル|コマンド応答：0x55 ON, 0x00 OFF|
 |SNS1G|0x14|センサー1(超音波センサー) データ取得|コマンド応答：16-bitデータを下位バイト、上位バイトの順に転送|
@@ -137,7 +137,7 @@ Motor-Driver Unitの制御コマンドは、MSX-BASICでも負荷をかけずに
 
  パラメータ設定を行うにはLoRaユニットの動作モードをMode3（Config/DeepSleepモード）に変更する必要があります。動作モードはLoRaユニット本体のディップスイッチで切り替えます。無線通信時（通常利用時）は**Mode 0**に設定し、パラメータ設定時は**Mode 3**に設定します。
  
-パラメータ設定はMode3の状態でLoRaユニットの各レジスタに以下の値を書き込みます。この設定値は、送信機(IOEμ側)のLoRaユニット、受信機（Motor-Drive Unit側）のLoRaユニットともに**同じ値**にする必要があります。
+パラメータ設定はMode3の状態でLoRaユニットの各レジスタに以下の値を書き込みます。この設定値は、送信機(IOEμ側)のLoRaユニット、受信機（Motor-Driver Unit側）のLoRaユニットともに**同じ値**にする必要があります。
 
 ※ LoRaユニットの設定環境がない場合は、MSX本体とIOEμ（Multiplex 3-in-1 MO）を使って設定できます。詳細は/MISC/LoRa_Unitフォルダ内の[readme_lora_unit.md](/MISC/LoRa_Unit/readme_lora_unit.md)を参照ください。
 
@@ -170,15 +170,18 @@ Remo-Con Unitに搭載するアナログスティックを使って繊細な操�
 ![for Remo-Con Unit](image/motordriver_3-4-2.jpg)
 
 #### (3) MSX0 Stack用
-MSX0 Stack用のBASICプログラムのサンプルも準備中です。
+[MTR_MSX0.BAS](/MotorDriver_Unit/sample_MSX-BASIC/MOTOR.BAS)は、MSX0用のBASICプログラムのサンプルです。
+操作方法、現時点の制約は(1)のMSX＋IOEμ:Multiplex用と同じです。
+MSX0 Stackはキー数が少ないので、キー割り当てを変更すると操作性は改善すると思います。BASICプログラムですのでお好みで変更してください。
 
 ![for MSX0 Stack](image/motordriver_3-4-3.jpg)
 
 #### (4) MSX0 Card用
-MSX0 Card用のBASICプログラムのサンプルも準備中です。
+[MTR_MSX0.BAS](/MotorDriver_Unit/sample_MSX-BASIC/MOTOR.BAS)は、MSX0用のBASICプログラムのサンプルです。
+操作方法、現時点の制約は(1)のMSX＋IOEμ:Multiplex用と同じです。
+MSX0 CARDは画面は小さいですが、キー数が多いのでコマンドのキー割り当ての自由度が高そうです。お好みで変更してください。
 
 ![for MSX0 Card](image/motordriver_3-4-4.jpg)
-
 
 
 ## 4. 使用上の注意

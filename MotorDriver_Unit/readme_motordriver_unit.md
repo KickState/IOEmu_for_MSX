@@ -157,7 +157,7 @@ Motor-Driver Unitの制御コマンドは、MSX-BASICでも負荷をかけずに
 #### (1) MSX＋IOEμ:Multiplex用
 [MOTOR.BAS](/MotorDriver_Unit/sample_MSX-BASIC/MOTOR.BAS)は、IOEμ:Miltiplex用のBASICプログラムのサンプルです。前述のコマンドを使用してMSXでMotor-Drive Unitを制御するプログラムです。操作方法は、プログラムを実行すると画面に表示されます。
 
-※ 現時点での制約：LoRaユニットを使用した場合に双方向通信（センサー取得）が安定しません。Groveケーブルを使用したクロス接続の場合は双方向通信も問題ありません。
+※ 現時点での制約：LoRaユニットを使用した場合に双方向通信（センサー値取得）が安定しません。これはLoRaユニットで使用している[特定小電力無線モジュール E220-900T22S(JP) ](https://support.dragon-torch.tech/e220-900t22sjp-qa/)のトランスペアレント送信モードにおける既知の問題によるものです。対処方法は検討中です。尚、LoRaユニットを使用せずにGroveケーブルでクロス接続する場合には双方向通信も問題なく、センサー値取得も安定して行えます。また、LoRaユニットを使用する場合も、モーター制御（単方向通信）は問題ありません。
 
 ![for IOEμ](image/motordriver_3-4-1.jpg)
 
@@ -175,8 +175,8 @@ Remo-Con Unitに搭載するアナログスティックを使って繊細な操�
 [MTR_MSX0.BAS](/MotorDriver_Unit/sample_MSX-BASIC/MOTOR.BAS)は、MSX0用のBASICプログラムのサンプルです。
 MSX0 StackのGroveポートは青色のポート（Port-C）を使用してください。
 
-操作方法、現時点の制約は(1)のMSX＋IOEμ:Multiplex用と同じです。
-MSX0 Stackはキー数が少ないので、キー割り当てを変更すると操作性は改善すると思います。BASICプログラムですのでお好みで変更してください。
+操作方法、現時点の制約は(1)のMSX＋IOEμ:Multiplex用と同じです。「(1) MSX＋IOEμ:Multiplex用」を参照下さい。
+また、MSX0 Stackはキー数が少ないのでキー割り当てを変更すると操作性は改善すると思います。BASICプログラムですのでお好みで変更してください。
 
 
 ![for MSX0 Stack](image/motordriver_3-4-3.jpg)
@@ -185,8 +185,8 @@ MSX0 Stackはキー数が少ないので、キー割り当てを変更すると�
 [MTR_MSX0.BAS](/MotorDriver_Unit/sample_MSX-BASIC/MOTOR.BAS)は、MSX0用のBASICプログラムのサンプルです。
 MSX0 CardのGroveポートは初期状態ではI2Cになっていますので、MSX0 Cardに搭載するSetup UtilityでGroveポートの動作をUARTに変更して下さい。
 
-操作方法、現時点の制約は(1)のMSX＋IOEμ:Multiplex用と同じです。
-MSX0 CARDは画面は小さいですが、キー数が多いのでコマンドのキー割り当ての自由度が高そうです。お好みで変更してください。
+操作方法、現時点の制約は(1)のMSX＋IOEμ:Multiplex用と同じです。「(1) MSX＋IOEμ:Multiplex用」を参照下さい。
+また、MSX0 CARDは画面が小さい一方でキー数は多いので、Stackよりもコマンドのキー割り当ての自由度は高いです。お好みで変更してください。
 
 ![for MSX0 Card](image/motordriver_3-4-4.jpg)
 

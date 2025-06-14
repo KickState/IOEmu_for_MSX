@@ -9,7 +9,7 @@ PIC18F Qシリーズの8-bitマイコンを使用してMSXの各種IO機能を�
 例えば、「SCC-Emu」はMSX実機で使用できるSCC音源のエミュレーターです。
 
 ## 種類
-現在、単機能版のSimplexシリーズ 4種、多機能版のMultiplex 1種(SCC+DCSG+MIDI-OUT)を公開しています。また、Multiplexに搭載するGroveポートを経由して制御可能なMotor-Driverユニット、Remote-Controlユニットも用意しています。Motor-DriverユニットはMSX0 Stack/Cardから制御することも可能です。
+現在、単機能版のSimplexシリーズ 4種、多機能版のMultiplex 1種(SCC+DCSG+MIDI/Grove-Port)を公開しています。また、Multiplexに搭載するGroveポートを経由して制御可能なMotor-Driverユニット、Remote-Controlユニットも用意しています。Motor-DriverユニットはMSX0 Stack/Cardから制御することも可能です。
 
 * [IOEμ: SCC-Emu Simplex with 12-bit DAC](/SCC-Emu_Simplex_12bit-DAC/readme_scc-emu_12.md)
 * [IOEμ: SCC-Emu Simplex with 15-bit DAC](/SCC-Emu_Simplex_15bit-DAC/readme_scc-emu_15.md)

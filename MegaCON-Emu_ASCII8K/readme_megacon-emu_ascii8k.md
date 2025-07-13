@@ -26,6 +26,8 @@ MegaCON-Emuの回路、基板は[MegaSCC-Emu](/MegaSCC-Emu/readme_megascc-emu.md
 
 **MegaSCC-Emu基板**にASCII 8KタイプのMASK ROM（対応ROMに関しては概要を参照）を実装してください。MASK ROMを実装したMegaCON-EmuをMSX本体の空きスロットに挿入し、MSX本体の電源をオンしてください。通常のゲームROMと同様にゲームが起動します。
 
+使用例は[こちら](https://x.com/kickstate7/status/1940358018497184120)。　※Ｘへのリンクです。
+
 また、後述のディップスイッチでSCC-EmuをWriteOnlyモードで有効化できます。WriteOnlyモードのため、MGSDRV等ではSCC音源としては自動検出されませんが、SCCと同じアドレスマップで制御レジスタを搭載しており、SCCサウンドを出力できます。但し、[MegaSCC-Emu](/MegaSCC-Emu/readme_megascc-emu.md)のようなROM Disableモードは搭載していませんので、音源として使用する場合はMASK ROMを取り外すか、スロット切り離しスイッチを搭載した拡張スロットが必要です。MegaCON-EmuのSCC機能は実験的なオマケです。
 
 **ぱるぷ(@parupu_x_nagae)さんのゲームミュージック・SCCアレンジ作品がおススメです。**

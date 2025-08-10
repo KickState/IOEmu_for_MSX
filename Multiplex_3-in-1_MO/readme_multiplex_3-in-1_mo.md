@@ -120,6 +120,8 @@ MIDI出力機能は、MIDRYでのみ動作検証を行っていますが、Multi
 MIDI入力機能向けに動作確認用テストプログラムとして[MSX-BASICのサンプル](/Multiplex_3-in-1_MO/sample_MSX-BASIC/MIDI-IN/MIDI2PSG.BAS)を用意しています。BASICプログラムですが、実行にはBASICコンパイラ「MSX べーしっ君」が必要です。
 IOEμのGroveポートにMIDI-IF変換基板経由で**MIDI Keyboard**を接続してください。MIDI入力を使ってMSX内蔵PSG音源を鳴らすことが出来ます。Note On/offのみに対応しており、動作確認用の簡易プログラムです。IOEμは受信FIFOを強化しているため、純正Z80-SIOを使用する「MSX-MAGAZINE MIDI-I/F2」ではデータを取りこぼす条件でも受信できることを確認しています。
 
+**※ ファームウェア Rev. 1.1.1でMeSXでMIDI入力を使用する際に発生する不具合を修正しています。**
+
 ## 5. PICマイコン用Firmwareの書き込み方法
 
 firmwareフォルダ内の**HEXファイル**は、PICマイコン用のFirmwareです。Firmwareをオンボードで書き込むことも可能です。

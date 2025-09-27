@@ -9,15 +9,16 @@ PIC18F Qシリーズの8-bitマイコンを使用してMSXの各種IO機能を�
 例えば、「SCC-Emu」はMSX実機で使用できるSCC音源のエミュレーターです。
 
 ## 種類
-現在、単機能版のSimplexシリーズ 4種、多機能版のMultiplex 1種(SCC+DCSG+MIDI/Grove-Port)、及び Mega-ROMコントローラシリーズ2種を公開しています。また、Multiplexに搭載するGroveポートを経由して制御可能なMotor-Driverユニット、Remote-Controlユニットも用意しています。Motor-DriverユニットはMSX0 Stack/Cardから制御することも可能です。
+現在、単機能版のSimplexシリーズ 4種、多機能版のMultiplex 1種(SCC+DCSG+MIDI/Grove-Port)、Mega-ROMコントローラシリーズ2種、そして 1Mbit SRAMを搭載するSCC-Emu Plus (SOUND CARTRIDGE Emu)を公開しています。また、Multiplexに搭載するGroveポートを経由して制御可能なMotor-Driverユニット、Remote-Controlユニットも用意しています。Motor-DriverユニットはMSX0 Stack/Cardから制御することも可能です。
 
 * [IOEμ: SCC-Emu Simplex with 12-bit DAC](/SCC-Emu_Simplex_12bit-DAC/readme_scc-emu_12.md)
 * [IOEμ: SCC-Emu Simplex with 15-bit DAC](/SCC-Emu_Simplex_15bit-DAC/readme_scc-emu_15.md)
+* [IOEμ: SCC-Emu Plus with 1Mbit](/SCC-Emu_Plus_1Mbit/readme_scc-emu_plus.md)  **New !**
 * [IOEμ: DCSG-Emu Simplex with built-in DAC](/DCSG-Emu_Simplex/readme_dcsg-emu.md)
-* [IOEμ: SynthDAC-Emu Simplex](/SynthDAC-Emu_Simplex/readme_synthdac-emu.md)  **New!**
+* [IOEμ: SynthDAC-Emu Simplex](/SynthDAC-Emu_Simplex/readme_synthdac-emu.md)
 * [IOEμ: Multiplex 3-in-1 MO](/Multiplex_3-in-1_MO/readme_multiplex_3-in-1_mo.md)
-* [IOEμ: MegaSCC-Emu](/MegaSCC-Emu/readme_megascc-emu.md)  **New!**
-* [IOEμ: MegaCON-Emu ASCII8K](/MegaCON-Emu_ASCII8K/readme_megacon-emu_ascii8k.md)  **New!**
+* [IOEμ: MegaSCC-Emu](/MegaSCC-Emu/readme_megascc-emu.md)  **New !**
+* [IOEμ: MegaCON-Emu ASCII8K](/MegaCON-Emu_ASCII8K/readme_megacon-emu_ascii8k.md)  **New !**
 * [Motor-Driver Unit for IOEμ](/MotorDriver_Unit/readme_motordriver_unit.md)
 * [Remo-Con Unit for IOEμ](/RemoCon_Unit/readme_remocon_unit.md)
 

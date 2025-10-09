@@ -43,7 +43,7 @@ SOUND CARTRIDGEのメモリ制御は、SCCマッパーのメガロムと互換�
 
 ### (1) 動作確認済みのMSX本体
 
-以下のMSX、MSX互換機で起動することを確認しています。MeSX、OneChipBookで使用する場合は、F/W Rev. 1.0.2以降をお試し下さい（Rev. 1.0.1では起動しません）。
+以下のMSX、MSX互換機で起動することを確認しています。MeSX、OneChipBookで使用する場合は、F/W Rev. 1.0.2以降をお試し下さい（Rev. 1.0.1では起動しません）。但し、OneChipBookにおいてはソフトとの相性が確認されていますので、現時点でOneChipBookでの利用は推奨しません。
 
 * FS-A1GT (turboR)
 * HB-F1XDJ (MSX2+)

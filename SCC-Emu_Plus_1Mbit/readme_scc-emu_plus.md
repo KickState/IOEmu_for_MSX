@@ -37,7 +37,9 @@ SCC-Emu PlusはSCC互換モードにも対応しています。MGSDRV用プレ�
 ### (3) SCCマッパー対応ROMデータの実行
 
 SOUND CARTRIDGEのメモリ制御は、SCCマッパーのメガロムと互換があります。
-「Sound Cartridge ROM loader (SCROM Ver.1.2)」、「Sofarun」等を使用すると、SCC-Emu PlusのRAMに1MbitまでのROMデータをダウンロード、実行出来るようです。使用例は[こちら](https://x.com/kickstate7/status/1971856784978755724)。※Ｘへのリンクです。
+「Sound Cartridge ROM loader (SCROM Ver.1.2)」、「Sofarun」等を使用すると、SCC-Emu PlusのRAMに1MbitまでのROMデータをダウンロード、実行出来るようです。なお、SCROMのVer.1.3には未対応です。SCROMはVer.1.2をご使用ください。
+
+使用例は[こちら](https://x.com/kickstate7/status/1971856784978755724)。※Ｘへのリンクです。
 
 ## 4. 使用上の注意
 

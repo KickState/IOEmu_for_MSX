@@ -45,20 +45,18 @@ SOUND CARTRIDGEのメモリ制御は、SCCマッパーのメガロムと互換�
 
 ### (1) 動作確認済みのMSX本体
 
-以下のMSX、MSX互換機で起動することを確認しています。MeSX、OneChipBookで使用する場合は、F/W Rev. 1.0.2以降をお試し下さい（Rev. 1.0.1では起動しません）。但し、OneChipBookにおいてはソフトとの相性が確認されていますので、現時点でOneChipBookでの利用は推奨しません。
+以下のMSX、MSX互換機で起動することを確認しています。SCC-Emu PlusのF/Wは、Rev. 1.1.0以降を使用してください。Rev.1.0.xをご利用の場合は、Rev. 1.1.0以降へのUpdateをお勧めいたします。
+※ OneChipBookでの利用は推奨しません。
 
 * FS-A1GT (turboR)
 * HB-F1XDJ (MSX2+)
 * 1chipMSX (MSX2相当) オリジナル版 ※FPGAのバージョンは出荷版
 * CX5F (MSX1) 
 * MeSX
-* OneChipBook（OCM-PLD v3.9.2との組み合わせ）
 
 ### (2) MSX本体のリセット
 
-SCC-Emu Plusは、MSX本体のリセット信号を使用していません。
-そのため、SCC-Emu Plusが発音中にリセットすると、その時点で発声していた音が鳴り続けます。
-リセットを使用せずに電源をオフしてください。
+SCC-Emu Plusは、DefaultではMSX本体のリセット信号を使用していません。そのため、SCC-Emu Plusが発音中にリセットすると、その時点で発声していた音が鳴り続けます。リセットを使用する場合は、基板上のJP1,JP2をショートして下さい。
 
 ## 5. PICマイコン用Firmwareの書き込み方法
 

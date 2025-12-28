@@ -9,7 +9,11 @@ IOEμシリーズは、MSX実機用のカートリッジとして使用できる
 例えば、「SCC-Emu」はMSX実機で使用できるSCC音源のエミュレーターです。
 
 ## 種類
-現在、単機能版のSimplexシリーズ 4種、多機能版のMultiplex 1種(SCC+DCSG+MIDI/Grove-Port)、Mega-ROMコントローラシリーズ2種、1Mbit SRAMを搭載するSOUND CARTRIDGE Emuの"SCC-Emu Plus"、そして拡張スロット SlotExpander Lite版を公開しています。また、Multiplexに搭載するGroveポートを経由して制御可能なMotor-Driverユニット、Remote-Controlユニットも用意しています。Motor-DriverユニットはMSX0 Stack/Cardから制御することも可能です。
+IOEμは、ざっくり分類するとSCC-Emu音源を搭載するIOEμと、MSXの機能を拡張するIOEμの2種類があります。
+
+SCC-Emu音源を搭載するIOEμには、単機能版のSimplex（4種）、多機能版のMultiplex(SCC+DCSG+MIDI/Grove-Port)、Mega-ROMコントローラ（2種）、1Mbit SRAMを搭載するSOUND CARTRIDGE Emuの"SCC-Emu Plus"があり、MSXの機能拡張用IOEμには、拡張スロットのSlotExpander Lite、マッパーRAMのMemMapper-Emuを公開しています。
+
+その他にもMultiplexに搭載するGroveポートを経由して制御可能なMotor-Driverユニット、Remote-Controlユニットも用意しています。Motor-DriverユニットはMSX0 Stack/Cardから制御することも可能です。
 
 * [IOEμ: SCC-Emu Simplex with 12-bit DAC](/SCC-Emu_Simplex_12bit-DAC/readme_scc-emu_12.md)
 * [IOEμ: SCC-Emu Simplex with 15-bit DAC](/SCC-Emu_Simplex_15bit-DAC/readme_scc-emu_15.md)
@@ -20,6 +24,7 @@ IOEμシリーズは、MSX実機用のカートリッジとして使用できる
 * [IOEμ: MegaSCC-Emu](/MegaSCC-Emu/readme_megascc-emu.md)  
 * [IOEμ: MegaCON-Emu ASCII8K](/MegaCON-Emu_ASCII8K/readme_megacon-emu_ascii8k.md)  
 * [IOEμ: SlotExpander Lite](/SlotExpander_Lite/readme_slotexpander_lite.md)  **New !**
+* [IOEμ: MemMappper-Emu](/MemMapper-Emu/readme_memmapper-emu.md)  **New !**
 * [Motor-Driver Unit for IOEμ](/MotorDriver_Unit/readme_motordriver_unit.md)
 * [Remo-Con Unit for IOEμ](/RemoCon_Unit/readme_remocon_unit.md)
 

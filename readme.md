@@ -11,13 +11,14 @@ IOEμシリーズは、MSX実機用のカートリッジとして使用できる
 ## 種類
 IOEμは、ざっくり分類するとSCC-Emu音源を搭載するIOEμと、MSXの機能を拡張するIOEμの2種類があります。
 
-SCC-Emu音源を搭載するIOEμには、単機能版のSimplex（4種）、多機能版のMultiplex(SCC+DCSG+MIDI/Grove-Port)、Mega-ROMコントローラ（2種）、1Mbit SRAMを搭載するSOUND CARTRIDGE Emuの"SCC-Emu Plus"があり、MSXの機能拡張用IOEμには、拡張スロットのSlotExpander Lite、マッパーRAMのMemMapper-Emuを公開しています。
+SCC-Emu音源を搭載するIOEμには、単機能版のSimplex（4種）、多機能版のMultiplex(SCC+DCSG+MIDI/Grove-Port)、Mega-ROMコントローラ（2種）、1Mbit/2Mbit(RAM QUAD) SRAMを搭載するSOUND CARTRIDGE Emuシリーズ "SCC-Emu Plus"があり、MSXの機能拡張用IOEμには、拡張スロットのSlotExpander Lite、マッパーRAMのMemMapper-Emuを公開しています。
 
 その他にもMultiplexに搭載するGroveポートを経由して制御可能なMotor-Driverユニット、Remote-Controlユニットも用意しています。Motor-DriverユニットはMSX0 Stack/Cardから制御することも可能です。
 
 * [IOEμ: SCC-Emu Simplex with 12-bit DAC](/SCC-Emu_Simplex_12bit-DAC/readme_scc-emu_12.md)
 * [IOEμ: SCC-Emu Simplex with 15-bit DAC](/SCC-Emu_Simplex_15bit-DAC/readme_scc-emu_15.md)
-* [IOEμ: SCC-Emu Plus with 1Mbit](/SCC-Emu_Plus_1Mbit/readme_scc-emu_plus.md)  **New !**
+* [IOEμ: SCC-Emu Plus with 1Mbit](/SCC-Emu_Plus_1Mbit/readme_scc-emu_plus.md)
+* [IOEμ: SCC-Emu Plus with 2Mbit (RAM QUAD)](/SCC-Emu_Plus_2Mbit_RAM_QUAD/readme_scc-emu_plus_ram_quad.md)  **New !**
 * [IOEμ: DCSG-Emu Simplex with built-in DAC](/DCSG-Emu_Simplex/readme_dcsg-emu.md)
 * [IOEμ: SynthDAC-Emu Simplex](/SynthDAC-Emu_Simplex/readme_synthdac-emu.md)
 * [IOEμ: Multiplex 3-in-1 MO](/Multiplex_3-in-1_MO/readme_multiplex_3-in-1_mo.md)

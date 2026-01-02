@@ -32,9 +32,9 @@ F/Wの書込み方法はSCC-Emu Plus with 1Mbit版と同じですが、F/Wは[RA
 
 基板の発注方法を例示しますが、利用者の責任において実施して下さい。[IOEμの免責事項](../readme.md)を参照下さい。
 
-基板メーカーに[JLCPCB](https://jlcpcb.com/jp)を使用される場合は、gerberフォルダ内の[ZIPファイル（ガーバーファイル）](/SCC-Emu_Plus_2Mbit_RAM_QUAD/gerber/scc-emu_plus_2mbit_ram_quad_gerbe_20251011.zip)をそのまま[アップロード](https://cart.jlcpcb.com/jp/quote?orderType=1&stencilLayer=2&stencilWidth=100&stencilLength=100)してください。
+基板メーカーに[JLCPCB](https://jlcpcb.com/jp)を使用される場合は、gerberフォルダ内の[ZIPファイル（ガーバーファイル）](/SCC-Emu_Plus_2Mbit_RAM_QUAD/gerber/)をそのまま[アップロード](https://cart.jlcpcb.com/jp/quote?orderType=1&stencilLayer=2&stencilWidth=100&stencilLength=100)してください。
 
-※ RAM QUADの基板は1Mbit版とは設計が異なりますので、ガーバーデータは[RAM QUAD](/SCC-Emu_Plus_2Mbit_RAM_QUAD/gerber/scc-emu_plus_2mbit_ram_quad_gerbe_20251011.zip)用を使用してください。
+※ RAM QUADの基板は1Mbit版とは設計が異なりますので、ガーバーデータは[RAM QUAD](/SCC-Emu_Plus_2Mbit_RAM_QUAD/gerber/)用を使用してください。
 
 主な基板仕様は以下の通りです。
 

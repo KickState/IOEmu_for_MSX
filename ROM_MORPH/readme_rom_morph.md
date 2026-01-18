@@ -143,7 +143,10 @@ Flash ROMの書き込みは、ROMデータのMapper-Typeに依存せずに専用
 
 以下のMSX、MSX互換機で起動することを確認しています。随時、確認していきます。
 
+* FS-A1GT (turboR)
 * HB-F1XDJ (MSX2+)
+* CX5F (MSX)
+* MeSX (MSX互換機)
 
 ## 5. PICマイコン用Firmwareの書き込み方法
 

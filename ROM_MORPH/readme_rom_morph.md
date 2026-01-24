@@ -96,7 +96,7 @@ RMMAP Mnn
 
 ROMデータのMapper-Typeに依存せずに(1)のRMBURNでFlash ROMの書き込みは出来ますが、2Mbitを超えるデータを書き込む場合は、予め、RMMAPを使用してsingle-bank mode（設定値nnの上位桁を0）に設定した後に、一度、MSX電源をオフしてからFlash ROMの書き込みを行って下さい。
 
-設定例1：single-bank mode, KONAMI SCC
+設定例1：Single-bank mode, KONAMI SCC
 ```DOS
 RMMAP M01
 ```
@@ -133,13 +133,7 @@ Flash ROMの書き込みは、ROMデータのMapper-Typeに依存せずに専用
 
 2-bank modeの状態で2Mbitを超えるデータの書き込みを行うと書き込みに失敗します。この場合は、Single-bank modeに変更し、MSXを再起動した後に、再度、書き込みを行って下さい。
 
-### (2) 4Mbit Single-bank modeの制限
-
-「KONAMI SCC」Mapperの4Mbit Single-bank modeは、PICのリソースの兼ね合いで、バンク制御機能の一部が実装されていません。メタルギア2の起動は確認していますが、他のソフトでは動かない可能性が高いです。実質、メタルギア2専用です。
-
-一方、ASCII8K、ASCII16K、R-TYPEの各Ｍapperにおいては、そのような制約はありませんので、ほとんどのソフトで動作すると思います。
-
-### (3) 動作確認済みのMSX本体
+### (2) 動作確認済みのMSX本体
 
 以下のMSX、MSX互換機で起動することを確認しています。随時、確認していきます。
 
@@ -179,7 +173,7 @@ SNAPとROM MORPHの接続にスルーホール用テストワイヤ、又は2.54
 * 信号名は基板上のシルクを参考にして下さい。スルーホールとSNAPの各信号の並びは同じですが、逆順に接続しないように注意ください。
 * 安定化電源は、書き込まない方法のスルーホール群内の5VとGNDのスルーホールを使って接続し、5Vを給電してください。
 
-**※ Fireware書込み時は絶対にROM MORPHをMSX本体に接続しないで下さい。故障の原因になります。また、カードエッジ部を絶縁することをお勧めします（写真の例では絶縁はしていません）。**
+**※ Firmware書込み時は絶対にROM MORPHをMSX本体に接続しないで下さい。故障の原因になります。また、カードエッジ部を絶縁することをお勧めします（写真の例では絶縁はしていません）。**
 
 ![ROM_MORPH_SNAP_PIC18](image/ROM_MORPH_SNAP_PIC18.jpg)
 

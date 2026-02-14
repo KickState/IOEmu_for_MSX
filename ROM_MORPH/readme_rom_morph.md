@@ -19,8 +19,7 @@
 
 ## 2. 外観
 
-![ROM MORPH](image/ROM_MORPH_1.jpg)
-![ROM MORPH](image/ROM_MORPH_2.jpg)
+![ROM MORPH](image/ROM_MORPH_3.jpg)
 
 ## 3. 使用方法
 

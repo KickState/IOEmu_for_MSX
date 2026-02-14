@@ -6,6 +6,7 @@
 * 2つの8-bit PICマイコン(Main:PIC18F, Sub:PIC16F)を使用し、SCC-Emu、Voice DAC、各種メモリバンク制御等の機能を実現しています。
 * MSX実機で使用できます。
 * Flash-ROM容量は4Mbitです。Max 4MbitのSingle-bnak modeとMax 2Mbit/bankの2-bank modeに対応しています。
+* 2-bank modeではMax 2MbitのROMを2つ書き込み可能で、Mapper-typeも個別に指定できます。
 * (要望が多ければ、Max 1Mbit/bankの4-bank modeにも対応するかもしれません。)
 * Mapper-Typeは、KONAMI-SCC、KONAMI(非SCC)、ASCII8K、ASCII16K、R-TYPE、NORMAL-ROMの6種類に対応しています。
 * Mapper-Typeの切り替えは、専用のDOSコマンドで行い、その設定はROM MORPHの不揮発性メモリ(PIC内蔵)に保存されます。
@@ -13,7 +14,7 @@
 * また、Voice DAC機能も搭載しており、KONAMI(非SCC)、NORMAL Mapperでは一部ソフトで音声再生も可能です。
 * 例えば、新世サイザー、牌の魔術師ではVoice DACによる発声が可能です。
 * SCCレジスタ、BANKレジスタへのアクセスにはWaitが挿入されますが、Flash ROMへのアクセスにはROM MORPHはWaitを挿入しません。
-* このため、8-bit PICによるエミュレーションでもゲームプレイへの違和感は少なく抑えられていると思います（ゼロではありません）。
+* このため、8-bit PICによるエミュレーションでもゲームプレイへの違和感は少なく抑えられていると思います。
 * 入手性の良い現役の安価なPICマイコンを使用しており、その周辺回路も含めて、2026年現在でも入手可能な部品で設計しています。
 * 4MbitのFlash ROMもDigikeyで入手できます（2026年1月時点）。
 
@@ -30,7 +31,7 @@
 
 ### (1) Flash-ROM書込み方法
 
-専用のDOSコマンド[RMBURN.COM](tools/)を使用してROM MORPHのFlash-ROMに任意データを書き込みます。書き込みデータのMapper-Typeは何であっても構いません。データはRAWデータとして書き込み、Mapper-Typeは後述の別コマンドで設定します。但し、2Mbitを超えるROMデータを書き込み場合は、書き込み前に「Max 4MbitのSingle-bank mode」に変更しておく必要があります。以下、書き込み手順です。専用コマンドはDOS1でも使用できます。
+専用のDOSコマンド[RMBURN.COM](tools/)を使用してROM MORPHのFlash-ROMに任意データを書き込みます。書き込むROMデータのMapper-Typeは何であっても構いません。ROMデータはRAWデータとして書き込み、Mapper-Typeは後述の別コマンドで設定します。但し、2Mbitを超えるROMデータを書き込む場合は、書き込み前に「Max 4MbitのSingle-bank mode」に変更しておく必要があります。以下、書き込み手順です。専用コマンドはDOS1でも使用できます。
 書き込み時間はデータ容量次第ですが、1Mbitでも数分掛かります。
 
 ※ ROM MORPHをはじめて使用する際は、Flash-ROMへの書き込みの前にPIC16、PIC18のfirmwareの書き込みを先に行う必要があります。「5. PICマイコン用Firmwareの書き込み方法」に従って、PICマイコンのfirmwareの書き込みを行って下さい。
@@ -60,7 +61,7 @@ RMBURN <file>
 
 ### (2) Mapper-Type設定方法
 
-専用のDOSコマンド[RMMAP.COM](tools/)を使用してROM MORPHにMapper-Typeを設定します。設定値はROM MORPHの不揮発性メモリ（ROMデータとは別の領域）に保存され、MSXの電源をオフしても消えません。
+専用のDOSコマンド[RMMAP.COM](tools/)を使用してROM MORPHにMapper-Typeを設定します。Mapper-Typeの設定値はROM MORPHの不揮発性メモリ（ROMデータとは別の領域）に保存され、MSXの電源をオフしても消えません。
 
 ROM MORPHは、「Max 4MbitのSingle-bnak mode」と「Max 2Mbitの2-bank mode」に対応しますが、2-bank modeではバンク毎にMapper-Typeを設定できます。2Mbitを超えるデータを書き込む場合は、必ず、書込み前に「Max 4MbitのSingle-bank mode」に設定する必要があります。
 
@@ -75,7 +76,7 @@ ROM MORPHは、「Max 4MbitのSingle-bnak mode」と「Max 2Mbitの2-bank mode�
 |5|NORMAL|32KByte以下のROMで指定します。Voice DAC対応。
 |6|R-TYPE|Single-bank modeのみで指定可。
 
-* 「KONAMI」、「NORMAL」では対応するソフト（例：牌の魔術師、新世サイザー）であれば、Voice DAC機能により音声も再生できます。
+* 「KONAMI (非SCC)」、「NORMAL」では対応するソフト（例：牌の魔術師、新世サイザー）であれば、Voice DAC機能により音声も再生できます。
 *  32KByte以下のROMデータの場合は「NORMAL」を指定します。
 * 「R-TYPE」は、Single-bank modeのみで使用可能です。
 
@@ -107,18 +108,18 @@ RMMAP M31
 ### (3) スイッチ類
 
 * SW1 : 基板右端のスライドスイッチ。ROMの起動をON、OFF出来ます。
-* SW2 : 基板右上の２回路のディップスイッチ。DS1 (左)は2-bank mode時のbank[1|2]指定に使用します。DS2 (右)は現時点で予約です。
+* SW2 : 基板右上の2回路のディップスイッチ。DS1 (左)は2-bank mode時のbank[1|2]指定に使用します。DS2 (右)は現時点で予約です。
 
 ディップスイッチ(SW2)：
 |SW#|OFF|ON|備考
 |--|--|--|--
-|DS1 (左)|Bank2|bank1| 2-bank mode時のbankを指定します。 Single-bank mode時はこの設定は無視されます。
+|DS1 (左)|Bank2|bank1| 2-bank mode時のFlashROMのbankを指定します。 Single-bank mode時はこの設定は無視されます。
 |DS2 (右)|-|-| 未使用（予約）
 
 ### (4) SCC互換音源としての利用
 
 ROM MORPHの「KONAMI-SCC」Mapperは、SCC互換モードに対応していますが、IOEμの他のSCC-Emuシリーズとは異なり、SCCレジスタのリードには対応していません。このためMGSDRV等ではROM MORPHを自動識別できませんが、手動でROM MORPHのスロットを指定すればMGSDRVでも使用できることを確認しています。
-ROM MORPHをSCC互換音源として使用する場合は、Mapper-Typeを「KONAMI-SCC」、スライドスイッチ(SW1)をオフとし、その上でMGSDRVの場合はROM MORPHのスロットを指定して使用してください。
+ROM MORPHをSCC互換音源として使用する場合は、Mapper-Typeを「KONAMI-SCC」に設定、スライドスイッチ(SW1)をオフ、ROM MORPHのスロット番号を指定してMGSDRVを使用してください。
 
 **ぱるぷ(@parupu_x_nagae)さんのゲームミュージック・SCCアレンジ作品がおススメです。**
 

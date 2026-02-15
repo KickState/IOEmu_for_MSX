@@ -12,7 +12,7 @@ IOEμシリーズは、MSX実機用カートリッジとして使用できるIO�
 IOEμは、SCC-Emuを搭載する製品を中心に以下の6つのカテゴリで計14種を公開しています。
 それぞれの特徴、使用方法等に関しては、リンク先の各フォルダ内の「readme_xxx.md」ファイルをご参照ください。
 
-最新作は、Multi-Mapper対応のFlash-ROMカートリッジ 「[ROM MORPH](/ROM_MORPH/readme_rom_morph.md)」 です。
+最新作は、Multi-Mapper対応のFlash-ROMカートリッジ 「[ROM MORPH VAULT](/ROM_MORPH_VAULT/readme_rom_morph_vault.md)」 です。ROM MORPH VAULTは、ROM MORPHの派生モデルでSRAM-BACKUP Emuに対応しています。
 
 ### (1) SOUND CARTRIDGE Emu :
 * [IOEμ: SCC-Emu Plus with 1Mbit RAM](/SCC-Emu_Plus_1Mbit/readme_scc-emu_plus.md)
@@ -20,12 +20,13 @@ IOEμは、SCC-Emuを搭載する製品を中心に以下の6つのカテゴリ�
 
 ### (2) FLASH-ROM用MegaCON-Emu :
 * [IOEμ: ROM MORPH – Multi-Mapper Support with 4Mbit Flash-ROM](/ROM_MORPH/readme_rom_morph.md)  **New !**
+* [IOEμ: ROM MORPH VAULT – Multi-Mapper Support with Flash-ROM and SRAM Backup Emulation](/ROM_MORPH/readme_rom_morph.md)  **New !**
 
 ### (3) MASK-ROM再生用MegaCON-Emu :
 * [IOEμ: MegaSCC-Emu for KONAMI-SCC MASK-ROM](/MegaSCC-Emu/readme_megascc-emu.md)  
 * [IOEμ: MegaCON-Emu  for ASCII8K MASK-ROM](/MegaCON-Emu_ASCII8K/readme_megacon-emu_ascii8k.md)  
 
-### (4) Smiplex :
+### (4) Simplex :
 * [IOEμ: SCC-Emu Simplex with 12-bit DAC](/SCC-Emu_Simplex_12bit-DAC/readme_scc-emu_12.md)
 * [IOEμ: SCC-Emu Simplex with 15-bit DAC](/SCC-Emu_Simplex_15bit-DAC/readme_scc-emu_15.md)
 * [IOEμ: DCSG-Emu Simplex with built-in DAC](/DCSG-Emu_Simplex/readme_dcsg-emu.md)
@@ -54,7 +55,7 @@ IOEμは、SCC-Emuを搭載する製品を中心に以下の6つのカテゴリ�
 
 本免責事項に記載されている内容は、提供者が本コンテンツに対する権利を放棄するものではありません。
 
-© 2024-2025 [KickState](https://x.com/kickstate7). All rights reserved.
+© 2024-2026 [KickState](https://x.com/kickstate7). All rights reserved.
 
 ## Disclaimer
 
@@ -68,5 +69,5 @@ All copyrights and other rights related to the Content belong to the provider. Y
 The inclusion of this disclaimer does not constitute a waiver of the provider's rights over the Content.
 
 
-© 2024-2025 [KickState](https://x.com/kickstate7). All rights reserved.
+© 2024-2026 [KickState](https://x.com/kickstate7). All rights reserved.
 

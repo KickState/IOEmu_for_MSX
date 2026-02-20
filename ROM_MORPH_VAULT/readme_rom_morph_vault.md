@@ -15,13 +15,9 @@
 * RM-VAULTの Mapper-Type は、PAC、KONAMI-SCC、KONAMI(非SCC)、ASCII8K、ASCII16K、NORMAL-ROMの6種類に対応しています。
 * SRAM BACK-UP Emu 機能は、PAC、KONAMI(非SCC)、ASCII8K、ASCII16K の4種のMapper-Typeで使用できます。
 * BACK-UPメモリには、PIC内蔵のNVM（不揮発性メモリ）を用いています。
-* このため、BACK-UPメモリはROMの書き換えでは消えません。
-* ROMを書き換えた場合も、再度ROMを書き戻せば、BACK-UPデータは復活します。
+* このため、BACK-UPメモリはROMの書き換えでは消えません。ROMを書き換えた場合も、再度ROMを書き戻せば、BACK-UPデータは復活します。
 * また、Mapper-type毎に8KByte、計32KbyteのNVMが割り当てられるため、各MapperのBACK-UPデータは共存できます。
-* PIC内蔵NVMの書き換え可能回数は、「常温」環境下で1万回程度を想定していますが、あくまで期待値です。メーカー定格は Min 1000回（Ta:85℃）です。
-* BACKUP用NVMは、ROM MORPHシリーズのF/Wでは使用されない領域を使用しており、仮にNVMの寿命を超えてもROM MORPHとして使用できます。
-* NVMのアクセスの際には、キャッシュメモリを用いており、書き込み回数を減らす工夫もしています。
-* 余ったNVM領域を使わずに放置するより積極的に使用しています。常温下で1万回を期待し、リスクよりも利便性を取りました。
+* NVMの書き換え可能回数は有限（後述）ですが、ROM MORPHシリーズのF/Wでは使用されない領域を使用しており、仮にNVMの寿命を超えてもROM MORPHとして使用できます。
 * その代わりバックアップ電池も、SRAMも使用せずに、SRAM BACK-UP機能を実現しています。
 * Mapper-Typeの切り替えは、専用のDOSコマンドで行い、その設定はRM-VAULTの不揮発性メモリ(PIC内蔵)に保存されます。
 * Simplexシリーズの[SCC-Emu](/SCC-Emu_Simplex_12bit-DAC/readme_scc-emu_12.md)相当が搭載されており、KONAMI-SCC MapperではSCCサウンドの再生も可能です。
@@ -163,9 +159,9 @@ PICマイコンのFirmwareをUpdateする際は、大切なプレイデータは
 * FS-A1GT (turboR)
 * HB-F1XDJ (MSX2+)
 * CX5F (MSX)
-* MeSX (MSX互換機)： ※ MeSXでは新10倍のSRAMフォーマットは出来ません。
+* MeSX (MSX互換機)
 
-※ MSX互換機のMeSXでは新10倍のSRAMフォーマットが出来ません。但し、MeSXの場合でも、他のMSXでSRAMをフォーマットした後であれば、ゲーム中のSAVE/LOAD機能は使用出来るようです。
+※ MeSXには、PIC16/18 Firmware Rev.0.04以降で対応しています。
 
 ## 5. PICマイコン用Firmwareの書き込み方法
 

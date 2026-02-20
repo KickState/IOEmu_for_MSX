@@ -161,7 +161,7 @@ PICマイコンのFirmwareをUpdateする際は、大切なプレイデータは
 * CX5F (MSX)
 * MeSX (MSX互換機)
 
-※ MeSXには、PIC16/18 Firmware Rev.0.04以降で対応しています。
+※ MeSXには、PIC16/18 Firmware Rev.0.0.4以降で対応しています。
 
 ## 5. PICマイコン用Firmwareの書き込み方法
 

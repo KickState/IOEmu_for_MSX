@@ -12,11 +12,11 @@ IOEμシリーズは、MSX実機用カートリッジとして使用できるIO�
 IOEμは、SCC-Emuを搭載する製品を中心に以下の6つのカテゴリで計14種を公開しています。
 それぞれの特徴、使用方法等に関しては、リンク先の各フォルダ内の「readme_xxx.md」ファイルをご参照ください。
 
-最新作は、Multi-Mapper対応のFlash-ROMカートリッジ 「[ROM MORPH VAULT](/ROM_MORPH_VAULT/readme_rom_morph_vault.md)」 です。ROM MORPH VAULTは、ROM MORPHの派生モデルでSRAM-BACKUP Emuに対応しています。
+最新作は、Multi-Mapper対応のFlash-ROMカートリッジ 「[ROM MORPH VAULT](/ROM_MORPH_VAULT/readme_rom_morph_vault.md)」 です。ROM MORPH VAULTは、ROM MORPHの派生モデルでSRAM-BACKUP Emuに対応しています。また、そのVAULTの技術を応用して、IOEμシリーズの原点「SCC-Emu Simplex」にPAC機能(SRAM-BACKUP Emu機能)を追加した「[SCC-PAC Emu](/SCC-PAC_Emu_12bit-DAC/readme_scc-pac_emu_12.md)」もリリースしました。
 
 ### (1) SOUND CARTRIDGE Emu :
 * [IOEμ: SCC-Emu Plus with 1Mbit RAM](/SCC-Emu_Plus_1Mbit/readme_scc-emu_plus.md)
-* [IOEμ: SCC-Emu Plus RAM QUAD with 2Mbit RAM](/SCC-Emu_Plus_2Mbit_RAM_QUAD/readme_scc-emu_plus_ram_quad.md)  **New !**
+* [IOEμ: SCC-Emu Plus RAM QUAD with 2Mbit RAM](/SCC-Emu_Plus_2Mbit_RAM_QUAD/readme_scc-emu_plus_ram_quad.md)  
 
 ### (2) FLASH-ROM用MegaCON-Emu :
 * [IOEμ: ROM MORPH – Multi-Mapper Support with 4Mbit Flash-ROM](/ROM_MORPH/readme_rom_morph.md)  **New !**
@@ -26,20 +26,24 @@ IOEμは、SCC-Emuを搭載する製品を中心に以下の6つのカテゴリ�
 * [IOEμ: MegaSCC-Emu for KONAMI-SCC MASK-ROM](/MegaSCC-Emu/readme_megascc-emu.md)  
 * [IOEμ: MegaCON-Emu  for ASCII8K MASK-ROM](/MegaCON-Emu_ASCII8K/readme_megacon-emu_ascii8k.md)  
 
-### (4) Simplex :
+### (4) SCC-PAC Emu :
+* [IOEμ: SCC-PAC Emu with 12-bit DAC](/SCC-PAC_Emu_12bit-DAC/readme_scc-pac_emu_12.md)  **New !**
+* [IOEμ: SCC-PAC Emu with 15-bit DAC](/SCC-PAC_Emu_15bit-DAC/readme_scc-pac_emu_15.md)  **New !**
+
+### (5) Simplex :
 * [IOEμ: SCC-Emu Simplex with 12-bit DAC](/SCC-Emu_Simplex_12bit-DAC/readme_scc-emu_12.md)
 * [IOEμ: SCC-Emu Simplex with 15-bit DAC](/SCC-Emu_Simplex_15bit-DAC/readme_scc-emu_15.md)
 * [IOEμ: DCSG-Emu Simplex with built-in DAC](/DCSG-Emu_Simplex/readme_dcsg-emu.md)
 * [IOEμ: SynthDAC-Emu Simplex](/SynthDAC-Emu_Simplex/readme_synthdac-emu.md)
 
-### (5) Multiplex :
+### (6) Multiplex :
 * [IOEμ: Multiplex 3-in-1 MO](/Multiplex_3-in-1_MO/readme_multiplex_3-in-1_mo.md)
 * [Motor-Driver Unit for IOEμ](/MotorDriver_Unit/readme_motordriver_unit.md)
 * [Remo-Con Unit for IOEμ](/RemoCon_Unit/readme_remocon_unit.md)
 
-### (6) 機能拡張 :
-* [IOEμ: SlotExpander Lite](/SlotExpander_Lite/readme_slotexpander_lite.md)  **New !**
-* [IOEμ: MemMappper-Emu](/MemMapper-Emu/readme_memmapper-emu.md)  **New !**
+### (7) 機能拡張 :
+* [IOEμ: SlotExpander Lite](/SlotExpander_Lite/readme_slotexpander_lite.md)
+* [IOEμ: MemMappper-Emu](/MemMapper-Emu/readme_memmapper-emu.md) 
 
 
 その他、MISCフォルダにはOneChipBook向けのInternal Expansion Cardサイズの[Universal Boardのガーバーデータ](/MISC/Universal_board_for_OneChipBook/readme_universal_board_for_onechipbook.md)を置いています。例えば、DCSG-Emu Simplex(PWM版)のファームウェアを書き込んだPICマイコンを、このUniversal Boardに実装すれば、OneChipBookの内蔵スロットに組み込むことも可能です。

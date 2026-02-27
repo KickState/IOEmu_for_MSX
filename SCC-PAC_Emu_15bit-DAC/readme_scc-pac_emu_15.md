@@ -1,5 +1,7 @@
 # IOEμ: SCC-PAC Emu with 15-bit DAC
 
+※　FWにバグがあるため、FWの公開を停止しています。
+
 ## 1. 概要
 
 * SCC-PAC Emu with 15-bit DAC (以降、SCC-PAC Emu)は、[SCC-Emu Simplex with 15-bit DAC](/SCC-Emu_Simplex_15bit-DAC/readme_scc-emu_15.md)の派生モデルです。

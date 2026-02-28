@@ -1,7 +1,5 @@
 # IOEμ: SCC-PAC Emu with 15-bit DAC
 
-※　FWにバグがあるため、FWの公開を停止しています。
-
 ## 1. 概要
 
 * SCC-PAC Emu with 15-bit DAC (以降、SCC-PAC Emu)は、[SCC-Emu Simplex with 15-bit DAC](/SCC-Emu_Simplex_15bit-DAC/readme_scc-emu_15.md)の派生モデルです。
@@ -71,6 +69,17 @@ SCC-PAC EmuのSCC互換音源は、SCC互換のためMGSDRV以外でも使用で
 SCC-PAC Emuは、MSX本体のリセット信号を使用していません。
 そのため、SCC互換音源機能が発音中にリセットすると、その時点で発声していた音が鳴り続けます。
 この場合、電源をオフするか、再度、MGSDRVで再生すると正常状態に戻ります。
+
+### (5) 動作確認済みのMSX本体
+
+以下のMSXで起動することを確認しています。
+
+* FS-A1GT (turboR)
+* HB-F1XDJ (MSX2+)
+* CX5F (MSX)
+* MeSX (MSX互換機)
+
+※ FS-A1GT (turboR)には、Firmware Rev.1.0.2以降で対応しています。
 
 ## 5. PICマイコン用Firmwareの書き込み方法
 

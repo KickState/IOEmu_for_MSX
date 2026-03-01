@@ -1,4 +1,6 @@
-# IOEμ: SlotExpander Lite 
+# IOEμ: SlotExpander Lite Rev. A
+
+**※ 動作安定性向上目的で回路デザインをRev.Aに改定しました。Rev.Aでは回路図、Gerberデータを改版しています。**
 
 ## 1. 概要
 
@@ -14,7 +16,7 @@
 
 ## 2. 外観
 
-![SlotExpander_Lite](image/SlotExpander_Lite_1.jpg)
+![SlotExpander_Lite](image/SlotExpander_Lite_Rev-A_1.jpg)
 
 ## 3. 使用方法
 
@@ -24,7 +26,7 @@
 
 ### (1) 動作確認済みのMSX本体、及びカートリッジ
 
-以下のMSX、カートリッジ等で起動することを確認しています。**OneChipBook等のMSX互換機はサポートしません（動作しません）。**
+以下のMSX、カートリッジ等で起動することを確認しています。**MSX互換機はサポートしません。**
 
 ＜本体＞
 * FS-A1GT (turboR)

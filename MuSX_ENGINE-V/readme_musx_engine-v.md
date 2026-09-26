@@ -130,7 +130,7 @@ MSXCLOCKは、U2のPIC18より出力されます。クロック周波数は、No
 
 ## 11. 使用例
 
-以下、使用例です。※Xへのリンクです。
+以下、使用例です。※ Xへのリンクです。
 
 * [BASIC起動](https://x.com/kickstate7/status/2075717274753986691)
 * [BASICプログラム転送](https://x.com/kickstate7/status/2083337457232490728)

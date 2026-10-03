@@ -18,6 +18,7 @@ SCC音源をリアルタイムにエミュレーションする SCC-Emu から�
 * [IOEμ: μSX ENGINE-V (core-module)](/MuSX_ENGINE-V/readme_musx_engine-v.md) **New !**
 * [IOEμ: μSX SYSTEM Simplex (base-board)](/MuSX_SYSTEM_Simplex/readme_musx_system_simplex.md) **New !**
 * [OptionBoard for μSX](/MuSX_OptionBoard/readme_musx_optionboard.md) **New !**
+* [μSX REMO-CON (App for μSX)](/MuSX_REMO-CON/readme_musx_remo-con.md) **New !**
 
 ### (2) SOUND CARTRIDGE Emu :
 * [IOEμ: SCC-Emu Plus with 1Mbit RAM](/SCC-Emu_Plus_1Mbit/readme_scc-emu_plus.md)

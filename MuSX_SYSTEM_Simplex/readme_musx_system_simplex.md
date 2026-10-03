@@ -43,7 +43,10 @@
 
 ## 5. Key入力
 
-USB-シリアル変換モジュール CH340E 経由のシリアル入力をMSXのKeyMatrixに変換します。PCのTeraTermとの接続を想定しています。詳細は、[μSX ENGINE-V](/MuSX_ENGINE-V/readme_musx_engine-v.md)を参照ください。
+USB-シリアル変換モジュール CH340E 経由のシリアル入力をMSXのKeyMatrixに変換します。
+
+PCの TeraTermや、専用アプリ [μSX REMO-CON](/MuSX_REMO-CON/readme_musx_remo-con.md) との接続を想定しています。詳細は、[μSX ENGINE-V](/MuSX_ENGINE-V/readme_musx_engine-v.md)を参照ください。
+
 
 ※ Key入力を使用しない場合（ゲーム等）は、USB電源アダプタ等で5Vを給電してください(PCと接続する必要はありません)。
 

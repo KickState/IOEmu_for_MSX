@@ -53,7 +53,9 @@ MSXCLOCKは、PICから出力されます。クロック周波数は、Normal mo
 
 ## 5. Key入力
 
-UART入力（シリアル入力）をMSXのKeyMatrixに変換します。現状、PCのTeraTermとの接続を想定していますが、今後、個別キーボードへの対応も行う予定です。UARTの設定は、以下の通りです。
+UART入力（シリアル入力）をMSXのKeyMatrixに変換します。
+
+PCの TeraTermや、専用アプリ [μSX REMO-CON](/MuSX_REMO-CON/readme_musx_remo-con.md) との接続を想定していますが、今後、個別キーボードへの対応も行う予定です。UARTの設定は、以下の通りです。 [μSX REMO-CON](/MuSX_REMO-CON/readme_musx_remo-con.md) を使用する場合は、COMポートを選択するだけで使用できます。
 
 |項目|設定値|備考
 |--|--|--

@@ -7,7 +7,7 @@
 * CAS-IF基板は、μSXにカセットテープI/F機能を追加するGroveモジュールです。
 * μSXのGroveポートに接続して使用します。
 * CAS-IF基板を経由してμSXにデータレコーダーと接続できます。
-* また、M5Stack社の[AtomU](https://docs.m5stack.com/ja/core/ATOM%20U)を用いるとデータレコーダーをPCに接続することも出来ます。
+* また、M5Stack社の [AtomU](https://docs.m5stack.com/ja/core/ATOM%20U) / [Atom-Lite](https://docs.m5stack.com/ja/core/Atom-Lite) を用いるとデータレコーダーをPCに接続することも出来ます。
 * 「データレコーダー + CAS-IF基板 + AtomU + PC」の接続構成でテープデータをPCにバックアップできます。
 * おまけツールとして、BACKUP、DUMP（CAS変換）、CAS逆変換の3つのツール（Windows用）を用意しています。
 
@@ -18,7 +18,7 @@
 * X-Converter基板は、Gorveポート間をクロス接続するための基板です。
 * クロス接続に加えて、5V信号を3.3V CMOSレベルに変換し、ポート間の電源も分離します。
 * X-Converter基板を使用することで、5V-IO の μSX と 3.3V-IO の AtomU を安全に接続できます。
-* X-Converter基板と[AtomU](https://docs.m5stack.com/ja/core/ATOM%20U)をセットで使用することで、PCをデータレコーダーの代わりとしてμSXに接続できます。
+* X-Converter基板と [AtomU](https://docs.m5stack.com/ja/core/ATOM%20U) / [Atom-Lite](https://docs.m5stack.com/ja/core/Atom-Lite) をセットで使用することで、PCをデータレコーダーの代わりとしてμSXに接続できます。
 * 「μSX + X-Converter基板 + AtomU + PC」の構成においても、前述のBACKUPツールを利用できます。
 * また、開発中のμSX REMO-CONのテープ機能でも使用します。
 
@@ -61,11 +61,11 @@
 
 #### (2) PCとデータレコーダーを接続する場合
 
-M5Stack社の[AtomU](https://docs.m5stack.com/ja/core/ATOM%20U)が必要です。その代わり、アナログ入力ベースのWAVファイルではなく、1-bit DIGITAL RAW Sampling形式(サンプリング周波数:38.4KHz)でPCにバックアップ出来ます。
+M5Stack社の [AtomU](https://docs.m5stack.com/ja/core/ATOM%20U) 又は [Atom-Lite](https://docs.m5stack.com/ja/core/Atom-Lite) が必要です。その代わり、アナログ入力ベースのWAVファイルではなく、1-bit DIGITAL RAW Sampling形式(サンプリング周波数:38.4KHz)でPCにバックアップ出来ます。
 
-接続構成例 ： データレコーダー + AtomU + PC 
+接続構成例 ： データレコーダー + AtomU | Atom-Lite + PC 
 
-※ AtomUがEOLとなったため、他のAtom対応や代替も検討中です。
+※ AtomU がEOLとなったため、Atom-Lite をご使用ください。
 
 詳細は、後述の「CAS-IF TAPE Backup」等のツール同梱のReadmeを参照ください。
 
@@ -75,12 +75,12 @@ M5Stack社の[AtomU](https://docs.m5stack.com/ja/core/ATOM%20U)が必要です�
 
 ### 3.2. X-Converter基板
 
-主にμSXとPCを接続する場合に使用します。μSXとPC間をX-ConverterとAtomUを使ってブリッジ接続します。
-X-Converter基板は、Gorveポート間をクロス接続するための基板ですが、クロス接続に加えて、5V信号を3.3V CMOSレベルに変換し、ポート間の電源も分離しますので、5V-IO の μSX と 3.3V-IO の AtomU を安全に接続できます。
+主にμSXとPCを接続する場合に使用します。μSXとPC間を X-Converter と [AtomU](https://docs.m5stack.com/ja/core/ATOM%20U) / [Atom-Lite](https://docs.m5stack.com/ja/core/Atom-Lite) を使ってブリッジ接続します。
+X-Converter基板は、Gorveポート間をクロス接続するための基板ですが、クロス接続に加えて、5V信号を3.3V CMOSレベルに変換し、ポート間の電源も分離しますので、5V-IO の μSX と 3.3V-IO の [AtomU](https://docs.m5stack.com/ja/core/ATOM%20U) / [Atom-Lite](https://docs.m5stack.com/ja/core/Atom-Lite) を安全に接続できます。
 
 詳細は、後述の「CAS-IF TAPE Backup」等のツール同梱のReadmeを参照ください。
 
-接続構成例 ： μSX + X-Converter基板 + AtomU + PC 
+接続構成例 ： μSX + X-Converter基板 + AtomU | Atom-Lite + PC 
 
 使用例：
 * [μSXとPCの接続](https://x.com/kickstate7/status/2093656150164287781)
